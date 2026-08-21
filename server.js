@@ -196,16 +196,6 @@ app.post("/scan", (req, res) => {
   });
 });
 
-/*
-scanAttendee("A001");
-scanAttendee("A002");
-scanAttendee("A003");
-
-printerWebhook("JOB-3");
-printerWebhook("JOB-1");
-printerWebhook("JOB-2");
-*/
-
 app.listen(PORT, () => {
   console.log(`\nWebhook server running on http://localhost:${PORT}`);
 });
