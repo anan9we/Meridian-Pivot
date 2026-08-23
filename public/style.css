@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 20px 50px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #166534;
+  background: #dcfce7;
+  padding: 9px 13px;
+  border-radius: 20px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+}
+
+/* Statistics */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+}
+
+.stat-card strong {
+  font-size: 30px;
+}
+
+/* Cards */
+
+.card {
+  background: white;
+  padding: 24px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-title h2 {
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+
+.section-title p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.count-badge {
+  font-size: 13px;
+  color: #4b5563;
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 15px;
+}
+
+/* Scan form */
+
+.scan-form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+#message {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Attendees */
+
+.attendee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.attendee:last-child {
+  border-bottom: none;
+}
+
+.attendee strong {
+  font-size: 15px;
+}
+
+.attendee div div {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+/* Status */
+
+.status {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.status.NOT_CHECKED_IN {
+  color: #6b7280;
+}
+
+.status.PRINT_PENDING {
+  color: #d97706;
+}
+
+.status.CHECKED_IN {
+  color: #16a34a;
+}
+
+/* Two-column layout */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.two-column .card {
+  margin-bottom: 0;
+}
+
+/* Print jobs */
+
+.print-job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 5px;
+  border-bottom: 1px solid #e5e7eb;
+  gap: 15px;
+}
+
+.print-job:last-child {
+  border-bottom: none;
+}
+
+.print-job strong {
+  font-size: 14px;
+}
+
+.print-job div div {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.print-job button {
+  margin-left: 12px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+/* Activity log */
+
+.log-entry {
+  padding: 11px 5px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+/* Empty states */
+
+#printQueue p,
+#activityLog p {
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 10px 5px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .scan-form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+#message {
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-top: 14px;
+}
+
+#message.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+#message.notice {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+#message.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
